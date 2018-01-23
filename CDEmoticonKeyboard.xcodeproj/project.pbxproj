@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		629B59A92017250100847284 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 629B59A82017250100847284 /* Emoticons.bundle */; };
 		B40926E52012D1D0007240E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40926E42012D1D0007240E9 /* AppDelegate.swift */; };
 		B40926E72012D1D0007240E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40926E62012D1D0007240E9 /* ViewController.swift */; };
 		B40926EA2012D1D0007240E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40926E82012D1D0007240E9 /* Main.storyboard */; };
 		B40926EC2012D1D0007240E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B40926EB2012D1D0007240E9 /* Assets.xcassets */; };
 		B40926EF2012D1D0007240E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40926ED2012D1D0007240E9 /* LaunchScreen.storyboard */; };
-		B40926FA2012D3A1007240E9 /* CDEmoticonKeyboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40926F92012D3A1007240E9 /* CDEmoticonKeyboardController.swift */; };
 		B4DADD9620148369008F047E /* CDEmoticonKeyboardInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DADD9520148369008F047E /* CDEmoticonKeyboardInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		629B59A82017250100847284 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
 		B40926E12012D1D0007240E9 /* CDEmoticonKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDEmoticonKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40926E42012D1D0007240E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B40926E62012D1D0007240E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,7 +25,6 @@
 		B40926EB2012D1D0007240E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B40926EE2012D1D0007240E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B40926F02012D1D0007240E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B40926F92012D3A1007240E9 /* CDEmoticonKeyboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDEmoticonKeyboardController.swift; sourceTree = "<group>"; };
 		B4DADD9520148369008F047E /* CDEmoticonKeyboardInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDEmoticonKeyboardInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,7 +72,7 @@
 		B40926F82012D347007240E9 /* SourceFile */ = {
 			isa = PBXGroup;
 			children = (
-				B40926F92012D3A1007240E9 /* CDEmoticonKeyboardController.swift */,
+				629B59A82017250100847284 /* Emoticons.bundle */,
 				B4DADD9520148369008F047E /* CDEmoticonKeyboardInputView.swift */,
 			);
 			path = SourceFile;
@@ -138,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B40926EF2012D1D0007240E9 /* LaunchScreen.storyboard in Resources */,
+				629B59A92017250100847284 /* Emoticons.bundle in Resources */,
 				B40926EC2012D1D0007240E9 /* Assets.xcassets in Resources */,
 				B40926EA2012D1D0007240E9 /* Main.storyboard in Resources */,
 			);
@@ -150,7 +151,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B40926FA2012D3A1007240E9 /* CDEmoticonKeyboardController.swift in Sources */,
 				B40926E72012D1D0007240E9 /* ViewController.swift in Sources */,
 				B40926E52012D1D0007240E9 /* AppDelegate.swift in Sources */,
 				B4DADD9620148369008F047E /* CDEmoticonKeyboardInputView.swift in Sources */,

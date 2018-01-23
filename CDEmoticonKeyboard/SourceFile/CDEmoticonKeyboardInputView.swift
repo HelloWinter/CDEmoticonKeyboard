@@ -31,7 +31,7 @@ class CDEmoticonKeyboardInputView: UIView,UICollectionViewDataSource,UICollectio
         var barButtonItems = [UIBarButtonItem]()
         for (index,title) in titles.enumerated() {
             let titleItem = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(itemClick))
-            titleItem.tintColor = 
+            titleItem.tintColor = UIColor.orange
             titleItem.tag = index
             barButtonItems.append(titleItem)
             let flexItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
@@ -50,12 +50,14 @@ class CDEmoticonKeyboardInputView: UIView,UICollectionViewDataSource,UICollectio
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        toolBar.translatesAutoresizingMaskIntoConstraints = false
-        let views : [String : Any] = ["toolbar" : toolBar,"collectionview" : collectionView]
-        var cons = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[toolbar]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
-        cons += NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[collectionview]-0-[toolbar]-0-|", options: [.alignAllLeft,.alignAllRight], metrics: nil, views: views)
-        addConstraints(cons)
+        collectionView.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height - 44)
+        toolBar.frame = CGRect(x: 0, y: collectionView.frame.maxY, width: self.frame.width, height: 44)
+//        collectionView.translatesAutoresizingMaskIntoConstraints = false
+//        toolBar.translatesAutoresizingMaskIntoConstraints = false
+//        let views : [String : Any] = ["toolbar" : toolBar,"collectionview" : collectionView]
+//        var cons = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[toolbar]-0-|", options: [], metrics: nil, views: views)
+//        cons += NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[collectionview]-0-[toolbar]-0-|", options: [.alignAllLeft,.alignAllRight], metrics: nil, views: views)
+//        addConstraints(cons)
     }
     
     @objc private func itemClick(){
