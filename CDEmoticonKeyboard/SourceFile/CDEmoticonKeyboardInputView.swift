@@ -10,6 +10,7 @@ import UIKit
 
 private let CDEmoticonKeyboardCellIdentifier = "CDEmoticonKeyboardCellIdentifier"
 private let item_W_H = (UIScreen.main.bounds.width)/7
+private let toolbar_item_base : Int = 1234
 
 class CDEmoticonKeyboardInputView: UIView,UICollectionViewDataSource,UICollectionViewDelegate{
 
@@ -19,7 +20,7 @@ class CDEmoticonKeyboardInputView: UIView,UICollectionViewDataSource,UICollectio
         collectionView.isPagingEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: CDEmoticonKeyboardCellIdentifier)
+        collectionView.register(CDEmoticonKeyboardCell.self, forCellWithReuseIdentifier: CDEmoticonKeyboardCellIdentifier)
         collectionView.dataSource = self
         collectionView.delegate = self
         return collectionView
@@ -30,9 +31,9 @@ class CDEmoticonKeyboardInputView: UIView,UICollectionViewDataSource,UICollectio
         let titles = ["最近","默认","emoji","浪小花"]
         var barButtonItems = [UIBarButtonItem]()
         for (index,title) in titles.enumerated() {
-            let titleItem = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(itemClick))
+            let titleItem = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(itemClick(item:)))
             titleItem.tintColor = UIColor.orange
-            titleItem.tag = index
+            titleItem.tag = index + toolbar_item_base
             barButtonItems.append(titleItem)
             let flexItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
             barButtonItems.append(flexItem)
@@ -40,6 +41,11 @@ class CDEmoticonKeyboardInputView: UIView,UICollectionViewDataSource,UICollectio
         barButtonItems.removeLast()
         toolBar.items = barButtonItems
         return toolBar
+    }()
+    
+    fileprivate lazy var manager : EmoticonManager = {
+        let manager = EmoticonManager()
+        return manager
     }()
     
     override init(frame: CGRect) {
@@ -60,8 +66,11 @@ class CDEmoticonKeyboardInputView: UIView,UICollectionViewDataSource,UICollectio
 //        addConstraints(cons)
     }
     
-    @objc private func itemClick(){
-        
+    @objc private func itemClick(item : UIBarButtonItem){
+        if item.tag - toolbar_item_base != 0 {//最近功能未做，暂时不处理
+            let indexPath = IndexPath(item: 0, section: item.tag - toolbar_item_base)
+            collectionView.scrollToItem(at: indexPath, at: .left, animated: true)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -72,16 +81,19 @@ class CDEmoticonKeyboardInputView: UIView,UICollectionViewDataSource,UICollectio
 
 extension CDEmoticonKeyboardInputView {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return self.manager.packages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        let package = self.manager.packages[section]
+        return package.emoticons.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CDEmoticonKeyboardCellIdentifier, for: indexPath)
-        cell.contentView.backgroundColor = indexPath.row % 2 == 0 ? UIColor.red : UIColor.blue
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CDEmoticonKeyboardCellIdentifier, for: indexPath) as! CDEmoticonKeyboardCell
+//        cell.contentView.backgroundColor = indexPath.row % 2 == 0 ? UIColor.red : UIColor.blue
+        let package = self.manager.packages[indexPath.section]
+        cell.setupCellData(emoticon: package.emoticons[indexPath.row])
         return cell
     }
 }

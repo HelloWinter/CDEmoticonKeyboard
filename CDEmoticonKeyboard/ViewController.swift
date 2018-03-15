@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     private lazy var textView : UITextView = {
         let textView = UITextView()
+        textView.text = "点一下屏幕试试"
+        textView.font = UIFont.systemFont(ofSize: 25)
         return textView
     }()
     
