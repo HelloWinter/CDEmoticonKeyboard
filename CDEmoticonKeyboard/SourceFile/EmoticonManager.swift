@@ -9,6 +9,7 @@
 import UIKit
 
 class EmoticonManager: NSObject {
+    
     var packages : [EmoticonPackage] = [EmoticonPackage]()
     
     override init() {

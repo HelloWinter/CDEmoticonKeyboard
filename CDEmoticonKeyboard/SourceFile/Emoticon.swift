@@ -8,7 +8,17 @@
 
 import UIKit
 
+enum EmoticonTypes {
+    ///普通表情
+    case Normal
+    ///删除按钮
+    case Delete
+    ///空表情
+    case Empty
+}
+
 class Emoticon: NSObject {
+    ///这里在使用KVC赋值时，在swift4下会出现赋值都为空的情况，这是因为：
     ///在swift3中，编译器自动推断@objc，换句话说，它自动添加@objc
     ///在swift4中，编译器不再自动推断，你必须显式添加@objc
     @objc var type : String?
@@ -17,7 +27,6 @@ class Emoticon: NSObject {
             guard let code = code else {
                 return
             }
-            
             let scaner = Scanner(string: code)
             var value : UInt32 = 0
             scaner.scanHexInt32(&value)
@@ -43,10 +52,25 @@ class Emoticon: NSObject {
     
     private(set) var emojiCode : String?
     
-    init(dict : [String : String], identifier : String) {
+    private(set) var deletePngPath : String?
+    
+    private(set) var emoticonType : EmoticonTypes = .Normal
+    
+    ///正常表情
+    init(_ emoticonType : EmoticonTypes,_ dict : [String : String]? = nil,_ identifier : String? = nil) {
         super.init()
-        self.identifier = identifier
-        setValuesForKeys(dict)
+        self.emoticonType = emoticonType
+        switch emoticonType {
+        case .Normal:
+            if let dict = dict,let iden = identifier {
+                self.identifier = iden
+                setValuesForKeys(dict)
+            }
+        case .Delete:
+            deletePngPath = "Emoticons.bundle/compose_emotion_delete"
+        default:
+            break
+        }
     }
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {

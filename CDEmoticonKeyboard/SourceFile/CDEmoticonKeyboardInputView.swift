@@ -67,10 +67,8 @@ class CDEmoticonKeyboardInputView: UIView,UICollectionViewDataSource,UICollectio
     }
     
     @objc private func itemClick(item : UIBarButtonItem){
-        if item.tag - toolbar_item_base != 0 {//最近功能未做，暂时不处理
-            let indexPath = IndexPath(item: 0, section: item.tag - toolbar_item_base)
-            collectionView.scrollToItem(at: indexPath, at: .left, animated: true)
-        }
+        let indexPath = IndexPath(item: 0, section: item.tag - toolbar_item_base)
+        collectionView.scrollToItem(at: indexPath, at: .left, animated: true)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -95,6 +93,10 @@ extension CDEmoticonKeyboardInputView {
         let package = self.manager.packages[indexPath.section]
         cell.setupCellData(emoticon: package.emoticons[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
 }
 

@@ -32,6 +32,9 @@ class CDEmoticonKeyboardCell: UICollectionViewCell {
         }
         btn.setImage(UIImage(contentsOfFile: emoticon.pngPath ?? ""), for: .normal)
         btn.setTitle(emoticon.emojiCode ?? "", for: .normal)
+        if emoticon.emoticonType == .Delete {
+            btn.setImage(UIImage(named: emoticon.deletePngPath ?? ""), for: .normal)
+        }
     }
     
     override func layoutSubviews() {
