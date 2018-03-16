@@ -7,6 +7,10 @@
 //
 
 import UIKit
+///单页列数
+let single_page_Column : Int = 7
+//单页行数
+let single_page_Row : Int = 3
 
 class EmoticonPackage: NSObject {
     
@@ -24,7 +28,7 @@ class EmoticonPackage: NSObject {
             for dict in arr {
                 emoticons.append(Emoticon.init(.Normal,dict,identifier))
                 index = index + 1
-                if index == 20 {
+                if index == single_page_Column * single_page_Row - 1 {
                     emoticons.append(Emoticon.init(.Delete))//添加删除按钮
                     index = 0
                 }
@@ -35,11 +39,11 @@ class EmoticonPackage: NSObject {
     }
     
     private func addEmptyEmoticon(isRecently : Bool){
-        let remain = emoticons.count % 21
+        let remain = emoticons.count % (single_page_Column * single_page_Row)
         if remain == 0 && !isRecently {
             return
         }
-        for _ in remain..<20 {
+        for _ in remain..<(single_page_Column * single_page_Row - 1) {
             emoticons.append(Emoticon.init(.Empty))
         }
         emoticons.append(Emoticon.init(.Delete))

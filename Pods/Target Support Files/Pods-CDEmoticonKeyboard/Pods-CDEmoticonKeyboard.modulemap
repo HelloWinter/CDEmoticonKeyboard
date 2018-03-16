@@ -1,0 +1,6 @@
+framework module Pods_CDEmoticonKeyboard {
+  umbrella header "Pods-CDEmoticonKeyboard-umbrella.h"
+
+  export *
+  module * { export * }
+}

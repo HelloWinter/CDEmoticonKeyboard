@@ -9,10 +9,12 @@
 import UIKit
 
 private let CDEmoticonKeyboardCellIdentifier = "CDEmoticonKeyboardCellIdentifier"
-private let item_W_H = (UIScreen.main.bounds.width)/7
+private let item_W_H = (UIScreen.main.bounds.width)/CGFloat(single_page_Column)
 private let toolbar_item_base : Int = 1234
 
 class CDEmoticonKeyboardInputView: UIView,UICollectionViewDataSource,UICollectionViewDelegate{
+    
+    var emoticonClosure : ((_ emoticon : Emoticon) -> ())?
 
     private lazy var collectionView : UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: CDEmoticonKeyboardFlowLayout())
@@ -49,7 +51,7 @@ class CDEmoticonKeyboardInputView: UIView,UICollectionViewDataSource,UICollectio
     }()
     
     override init(frame: CGRect) {
-        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: item_W_H * 3 + 1 + 44))
+        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: item_W_H * CGFloat(single_page_Row) + 1 + 44))
         addSubview(collectionView)
         addSubview(toolBar)
     }
@@ -75,6 +77,18 @@ class CDEmoticonKeyboardInputView: UIView,UICollectionViewDataSource,UICollectio
         fatalError("init(coder:) has not been implemented")
     }
     
+    fileprivate func insertRecentlyEmoticon(_ emoticon : Emoticon){
+        if emoticon.emoticonType != .Normal {
+            return
+        }
+        if manager.packages.first!.emoticons.contains(emoticon) {
+            manager.packages.first!.emoticons.remove(at: manager.packages.first!.emoticons.index(of: emoticon)!)
+        }else{
+            manager.packages.first!.emoticons.remove(at: manager.packages.first!.emoticons.count - 2)
+        }
+        manager.packages.first!.emoticons.insert(emoticon, at: 0)
+    }
+    
 }
 
 extension CDEmoticonKeyboardInputView {
@@ -96,7 +110,22 @@ extension CDEmoticonKeyboardInputView {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let package = self.manager.packages[indexPath.section]
+        let emoticon = package.emoticons[indexPath.row]
+        switch emoticon.emoticonType {
+        case .Normal:
+            insertRecentlyEmoticon(emoticon)
+            collectionView.reloadData()
+            if let closure = self.emoticonClosure {
+                closure(emoticon)
+            }
+        case .Delete:
+            if let closure = self.emoticonClosure {
+                closure(emoticon)
+            }
+        default:
+            break
+        }
     }
 }
 

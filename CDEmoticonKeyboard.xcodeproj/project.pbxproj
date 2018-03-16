@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		629B59A92017250100847284 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 629B59A82017250100847284 /* Emoticons.bundle */; };
+		B4072F81205B99FF005D5AF4 /* ReleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4072F80205B99FF005D5AF4 /* ReleaseViewController.swift */; };
+		B4072F83205BCF17005D5AF4 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4072F82205BCF16005D5AF4 /* UITextViewExtension.swift */; };
 		B40926E52012D1D0007240E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40926E42012D1D0007240E9 /* AppDelegate.swift */; };
 		B40926E72012D1D0007240E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40926E62012D1D0007240E9 /* ViewController.swift */; };
 		B40926EA2012D1D0007240E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40926E82012D1D0007240E9 /* Main.storyboard */; };
@@ -18,10 +20,15 @@
 		B470729F205A3FEB00D2302A /* Emoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470729E205A3FEB00D2302A /* Emoticon.swift */; };
 		B47072A1205A634700D2302A /* CDEmoticonKeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47072A0205A634700D2302A /* CDEmoticonKeyboardCell.swift */; };
 		B4DADD9620148369008F047E /* CDEmoticonKeyboardInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DADD9520148369008F047E /* CDEmoticonKeyboardInputView.swift */; };
+		DDF90B1B88A7AD6399A30FDB /* Pods_CDEmoticonKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE15CFE59E926957DBB5E834 /* Pods_CDEmoticonKeyboard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A532D2BF774D7A7E7B139EF /* Pods-CDEmoticonKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDEmoticonKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDEmoticonKeyboard/Pods-CDEmoticonKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		412A1976488417D448F454CC /* Pods-CDEmoticonKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDEmoticonKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDEmoticonKeyboard/Pods-CDEmoticonKeyboard.release.xcconfig"; sourceTree = "<group>"; };
 		629B59A82017250100847284 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
+		B4072F80205B99FF005D5AF4 /* ReleaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseViewController.swift; sourceTree = "<group>"; };
+		B4072F82205BCF16005D5AF4 /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
 		B40926E12012D1D0007240E9 /* CDEmoticonKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDEmoticonKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40926E42012D1D0007240E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B40926E62012D1D0007240E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +41,7 @@
 		B470729E205A3FEB00D2302A /* Emoticon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoticon.swift; sourceTree = "<group>"; };
 		B47072A0205A634700D2302A /* CDEmoticonKeyboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDEmoticonKeyboardCell.swift; sourceTree = "<group>"; };
 		B4DADD9520148369008F047E /* CDEmoticonKeyboardInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDEmoticonKeyboardInputView.swift; sourceTree = "<group>"; };
+		CE15CFE59E926957DBB5E834 /* Pods_CDEmoticonKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDEmoticonKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF90B1B88A7AD6399A30FDB /* Pods_CDEmoticonKeyboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99616B8598281EA29EEAB9B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE15CFE59E926957DBB5E834 /* Pods_CDEmoticonKeyboard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B40926D82012D1D0007240E9 = {
 			isa = PBXGroup;
 			children = (
 				B40926E32012D1D0007240E9 /* CDEmoticonKeyboard */,
 				B40926E22012D1D0007240E9 /* Products */,
+				D6C1F78D18E32E559BAC6A17 /* Pods */,
+				99616B8598281EA29EEAB9B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +88,7 @@
 				B40926F82012D347007240E9 /* SourceFile */,
 				B40926E42012D1D0007240E9 /* AppDelegate.swift */,
 				B40926E62012D1D0007240E9 /* ViewController.swift */,
+				B4072F80205B99FF005D5AF4 /* ReleaseViewController.swift */,
 				B40926E82012D1D0007240E9 /* Main.storyboard */,
 				B40926EB2012D1D0007240E9 /* Assets.xcassets */,
 				B40926ED2012D1D0007240E9 /* LaunchScreen.storyboard */,
@@ -86,8 +106,18 @@
 				B470729A205A3FAB00D2302A /* EmoticonManager.swift */,
 				B470729C205A3FC600D2302A /* EmoticonPackage.swift */,
 				B470729E205A3FEB00D2302A /* Emoticon.swift */,
+				B4072F82205BCF16005D5AF4 /* UITextViewExtension.swift */,
 			);
 			path = SourceFile;
+			sourceTree = "<group>";
+		};
+		D6C1F78D18E32E559BAC6A17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A532D2BF774D7A7E7B139EF /* Pods-CDEmoticonKeyboard.debug.xcconfig */,
+				412A1976488417D448F454CC /* Pods-CDEmoticonKeyboard.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B40926F32012D1D0007240E9 /* Build configuration list for PBXNativeTarget "CDEmoticonKeyboard" */;
 			buildPhases = (
+				EEDFF9629790DDB5BB0DCF22 /* [CP] Check Pods Manifest.lock */,
 				B40926DD2012D1D0007240E9 /* Sources */,
 				B40926DE2012D1D0007240E9 /* Frameworks */,
 				B40926DF2012D1D0007240E9 /* Resources */,
+				7F5AEE2F411E87EF0C0EFB92 /* [CP] Embed Pods Frameworks */,
+				2C5FF8B8614A6AA0113E1DA5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,6 +191,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C5FF8B8614A6AA0113E1DA5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CDEmoticonKeyboard/Pods-CDEmoticonKeyboard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F5AEE2F411E87EF0C0EFB92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CDEmoticonKeyboard/Pods-CDEmoticonKeyboard-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CDEmoticonKeyboard/Pods-CDEmoticonKeyboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEDFF9629790DDB5BB0DCF22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CDEmoticonKeyboard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B40926DD2012D1D0007240E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -169,6 +256,8 @@
 				B470729B205A3FAB00D2302A /* EmoticonManager.swift in Sources */,
 				B470729D205A3FC600D2302A /* EmoticonPackage.swift in Sources */,
 				B40926E52012D1D0007240E9 /* AppDelegate.swift in Sources */,
+				B4072F83205BCF17005D5AF4 /* UITextViewExtension.swift in Sources */,
+				B4072F81205B99FF005D5AF4 /* ReleaseViewController.swift in Sources */,
 				B4DADD9620148369008F047E /* CDEmoticonKeyboardInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +393,7 @@
 		};
 		B40926F42012D1D0007240E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A532D2BF774D7A7E7B139EF /* Pods-CDEmoticonKeyboard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -321,6 +411,7 @@
 		};
 		B40926F52012D1D0007240E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 412A1976488417D448F454CC /* Pods-CDEmoticonKeyboard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;

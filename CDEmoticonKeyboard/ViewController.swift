@@ -8,26 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
-    private lazy var textView : UITextView = {
-        let textView = UITextView()
-        textView.text = "点一下屏幕试试"
-        textView.font = UIFont.systemFont(ofSize: 25)
-        return textView
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(textView)
-        textView.frame = self.view.bounds
-        let inputView = CDEmoticonKeyboardInputView()//
-        textView.inputView = inputView
+        self.title = "图文混排Demo"
     }
-
+    
+    @IBAction func releaseItemClick(_ sender: UIBarButtonItem) {
+        let controller = ReleaseViewController(nibName: nil, bundle: nil)
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }
