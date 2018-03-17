@@ -10,11 +10,14 @@
 		629B59A92017250100847284 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 629B59A82017250100847284 /* Emoticons.bundle */; };
 		B4072F81205B99FF005D5AF4 /* ReleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4072F80205B99FF005D5AF4 /* ReleaseViewController.swift */; };
 		B4072F83205BCF17005D5AF4 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4072F82205BCF16005D5AF4 /* UITextViewExtension.swift */; };
+		B4072F85205CC329005D5AF4 /* StringEmoticonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4072F84205CC329005D5AF4 /* StringEmoticonExtension.swift */; };
+		B4072F87205CE035005D5AF4 /* ReverseSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4072F86205CE035005D5AF4 /* ReverseSequence.swift */; };
 		B40926E52012D1D0007240E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40926E42012D1D0007240E9 /* AppDelegate.swift */; };
 		B40926E72012D1D0007240E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40926E62012D1D0007240E9 /* ViewController.swift */; };
 		B40926EA2012D1D0007240E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40926E82012D1D0007240E9 /* Main.storyboard */; };
 		B40926EC2012D1D0007240E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B40926EB2012D1D0007240E9 /* Assets.xcassets */; };
 		B40926EF2012D1D0007240E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40926ED2012D1D0007240E9 /* LaunchScreen.storyboard */; };
+		B410303F205D1657002B6579 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410303E205D1657002B6579 /* DataBaseManager.swift */; };
 		B470729B205A3FAB00D2302A /* EmoticonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470729A205A3FAB00D2302A /* EmoticonManager.swift */; };
 		B470729D205A3FC600D2302A /* EmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470729C205A3FC600D2302A /* EmoticonPackage.swift */; };
 		B470729F205A3FEB00D2302A /* Emoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470729E205A3FEB00D2302A /* Emoticon.swift */; };
@@ -29,6 +32,8 @@
 		629B59A82017250100847284 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
 		B4072F80205B99FF005D5AF4 /* ReleaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseViewController.swift; sourceTree = "<group>"; };
 		B4072F82205BCF16005D5AF4 /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
+		B4072F84205CC329005D5AF4 /* StringEmoticonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEmoticonExtension.swift; sourceTree = "<group>"; };
+		B4072F86205CE035005D5AF4 /* ReverseSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseSequence.swift; sourceTree = "<group>"; };
 		B40926E12012D1D0007240E9 /* CDEmoticonKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDEmoticonKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40926E42012D1D0007240E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B40926E62012D1D0007240E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +41,7 @@
 		B40926EB2012D1D0007240E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B40926EE2012D1D0007240E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B40926F02012D1D0007240E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B410303E205D1657002B6579 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		B470729A205A3FAB00D2302A /* EmoticonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonManager.swift; sourceTree = "<group>"; };
 		B470729C205A3FC600D2302A /* EmoticonPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonPackage.swift; sourceTree = "<group>"; };
 		B470729E205A3FEB00D2302A /* Emoticon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoticon.swift; sourceTree = "<group>"; };
@@ -89,6 +95,7 @@
 				B40926E42012D1D0007240E9 /* AppDelegate.swift */,
 				B40926E62012D1D0007240E9 /* ViewController.swift */,
 				B4072F80205B99FF005D5AF4 /* ReleaseViewController.swift */,
+				B410303E205D1657002B6579 /* DataBaseManager.swift */,
 				B40926E82012D1D0007240E9 /* Main.storyboard */,
 				B40926EB2012D1D0007240E9 /* Assets.xcassets */,
 				B40926ED2012D1D0007240E9 /* LaunchScreen.storyboard */,
@@ -107,6 +114,8 @@
 				B470729C205A3FC600D2302A /* EmoticonPackage.swift */,
 				B470729E205A3FEB00D2302A /* Emoticon.swift */,
 				B4072F82205BCF16005D5AF4 /* UITextViewExtension.swift */,
+				B4072F84205CC329005D5AF4 /* StringEmoticonExtension.swift */,
+				B4072F86205CE035005D5AF4 /* ReverseSequence.swift */,
 			);
 			path = SourceFile;
 			sourceTree = "<group>";
@@ -250,8 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4072F87205CE035005D5AF4 /* ReverseSequence.swift in Sources */,
+				B4072F85205CC329005D5AF4 /* StringEmoticonExtension.swift in Sources */,
 				B40926E72012D1D0007240E9 /* ViewController.swift in Sources */,
 				B470729F205A3FEB00D2302A /* Emoticon.swift in Sources */,
+				B410303F205D1657002B6579 /* DataBaseManager.swift in Sources */,
 				B47072A1205A634700D2302A /* CDEmoticonKeyboardCell.swift in Sources */,
 				B470729B205A3FAB00D2302A /* EmoticonManager.swift in Sources */,
 				B470729D205A3FC600D2302A /* EmoticonPackage.swift in Sources */,

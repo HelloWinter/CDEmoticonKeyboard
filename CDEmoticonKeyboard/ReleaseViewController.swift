@@ -8,12 +8,9 @@
 
 import UIKit
 
-class EmoticonTextAttachment : NSTextAttachment {
-    var emoticonText : String?
-}
 
 class ReleaseViewController: UIViewController {
-
+    
     private lazy var textView : UITextView = {
         let textView = UITextView()
         textView.text = "点一下屏幕试试"
@@ -44,6 +41,15 @@ class ReleaseViewController: UIViewController {
     
     @objc private func releaseText(){
         print(textView.extractEmoticonString())
+        do {
+            try DataBaseManager.shared.insertTable(content: textView.extractEmoticonString())
+            navigationController?.popViewController(animated: true)
+        } catch {
+            print("INSERT TABLE ERROR : \(error.localizedDescription)")
+            DataBaseManager.shared.closeDataBase()
+        }
+//        let str = textView.extractEmoticonString().emoticonAttributeString(font: textView.font!)
+        
     }
 
 }

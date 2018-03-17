@@ -8,6 +8,10 @@
 
 import UIKit
 
+private class EmoticonTextAttachment : NSTextAttachment {
+    var emoticonText : String?
+}
+
 extension UITextView {
     
     func extractEmoticonString() -> String {
