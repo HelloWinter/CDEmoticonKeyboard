@@ -18,7 +18,7 @@ class CDEmoticonKeyboardInputView: UIView,UICollectionViewDataSource,UICollectio
 
     private lazy var collectionView : UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: CDEmoticonKeyboardFlowLayout())
-        collectionView.backgroundColor = UIColor.purple
+        collectionView.backgroundColor = UIColor(red: 245.0/255.0, green: 245.0/255.0, blue: 247.0/255.0, alpha: 1.0)
         collectionView.isPagingEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false

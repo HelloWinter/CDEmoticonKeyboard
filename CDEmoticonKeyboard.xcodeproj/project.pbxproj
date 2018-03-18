@@ -18,6 +18,7 @@
 		B40926EC2012D1D0007240E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B40926EB2012D1D0007240E9 /* Assets.xcassets */; };
 		B40926EF2012D1D0007240E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40926ED2012D1D0007240E9 /* LaunchScreen.storyboard */; };
 		B410303F205D1657002B6579 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410303E205D1657002B6579 /* DataBaseManager.swift */; };
+		B4103041205D348C002B6579 /* CDInputToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4103040205D348C002B6579 /* CDInputToolBar.swift */; };
 		B470729B205A3FAB00D2302A /* EmoticonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470729A205A3FAB00D2302A /* EmoticonManager.swift */; };
 		B470729D205A3FC600D2302A /* EmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470729C205A3FC600D2302A /* EmoticonPackage.swift */; };
 		B470729F205A3FEB00D2302A /* Emoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470729E205A3FEB00D2302A /* Emoticon.swift */; };
@@ -42,6 +43,7 @@
 		B40926EE2012D1D0007240E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B40926F02012D1D0007240E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B410303E205D1657002B6579 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		B4103040205D348C002B6579 /* CDInputToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDInputToolBar.swift; sourceTree = "<group>"; };
 		B470729A205A3FAB00D2302A /* EmoticonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonManager.swift; sourceTree = "<group>"; };
 		B470729C205A3FC600D2302A /* EmoticonPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonPackage.swift; sourceTree = "<group>"; };
 		B470729E205A3FEB00D2302A /* Emoticon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoticon.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				B4072F82205BCF16005D5AF4 /* UITextViewExtension.swift */,
 				B4072F84205CC329005D5AF4 /* StringEmoticonExtension.swift */,
 				B4072F86205CE035005D5AF4 /* ReverseSequence.swift */,
+				B4103040205D348C002B6579 /* CDInputToolBar.swift */,
 			);
 			path = SourceFile;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				B40926E72012D1D0007240E9 /* ViewController.swift in Sources */,
 				B470729F205A3FEB00D2302A /* Emoticon.swift in Sources */,
 				B410303F205D1657002B6579 /* DataBaseManager.swift in Sources */,
+				B4103041205D348C002B6579 /* CDInputToolBar.swift in Sources */,
 				B47072A1205A634700D2302A /* CDEmoticonKeyboardCell.swift in Sources */,
 				B470729B205A3FAB00D2302A /* EmoticonManager.swift in Sources */,
 				B470729D205A3FC600D2302A /* EmoticonPackage.swift in Sources */,

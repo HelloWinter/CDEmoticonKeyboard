@@ -40,7 +40,6 @@ class ReleaseViewController: UIViewController {
     }
     
     @objc private func releaseText(){
-        print(textView.extractEmoticonString())
         do {
             try DataBaseManager.shared.insertTable(content: textView.extractEmoticonString())
             navigationController?.popViewController(animated: true)
